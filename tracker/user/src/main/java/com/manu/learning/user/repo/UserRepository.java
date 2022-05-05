@@ -7,4 +7,9 @@ import java.util.ArrayList;
 
 public interface UserRepository extends JpaRepository<EntityUserDetails, Integer> {
     ArrayList<EntityUserDetails> findByEmail(String email);
+    ArrayList<EntityUserDetails> findByEmailAndPrimarycontactnum(String email, String contact);
+    ArrayList<EntityUserDetails> findByEmailOrPrimarycontactnum(String email, String primarycontactnum);
+    EntityUserDetails save(EntityUserDetails userDetails);
+
+
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -24,4 +25,18 @@ public class EntityUserDetails {
     private String country;
     private String primarycontactnum;
     private String secondarycontactnum;
+    private String apikey;
+
+    public EntityUserDetails( String email, String firstname, String lastname, String landmark, String district, String state, String country, String primarycontactnum, String secondarycontactnum, String apikey) {
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.landmark = landmark;
+        this.district = district;
+        this.state = state;
+        this.country = country;
+        this.primarycontactnum = primarycontactnum;
+        this.secondarycontactnum = secondarycontactnum;
+        this.apikey = apikey;
+    }
 }
